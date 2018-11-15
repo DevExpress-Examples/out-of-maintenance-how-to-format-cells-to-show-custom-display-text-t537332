@@ -1,3 +1,8 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml.cs](./CS/WpfPivotCustomCellValueDisplaytext/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/VBWpfPivotCustomCellValueDisplaytext/MainWindow.xaml.vb))
+<!-- default file list end -->
 # How to format cells to show custom display text
 
 
