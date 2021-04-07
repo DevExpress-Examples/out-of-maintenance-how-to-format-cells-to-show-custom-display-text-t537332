@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{D0A9B6F3-B5F0-4D7B-86B6-1A1F1E38985F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>WpfPivotCustomCellValueDisplaytext</RootNamespace>
     <AssemblyName>WpfPivotCustomCellValueDisplaytext</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
@@ -97,9 +97,12 @@
       <DependentUpon>Application.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="App_Data\nwindDataSet.Designer.vb">
+    <Compile Include="nwindDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>nwindDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="nwindDataSet.vb">
       <DependentUpon>nwindDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.vb">
@@ -127,15 +130,15 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
     </EmbeddedResource>
     <None Include="app.config" />
-    <None Include="App_Data\nwindDataSet.xsc">
+    <None Include="nwindDataSet.xsc">
       <DependentUpon>nwindDataSet.xsd</DependentUpon>
     </None>
-    <None Include="App_Data\nwindDataSet.xsd">
+    <None Include="nwindDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>nwindDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="App_Data\nwindDataSet.xss">
+    <None Include="nwindDataSet.xss">
       <DependentUpon>nwindDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Settings.settings">
@@ -145,7 +148,7 @@
     <AppDesigner Include="My Project\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\nwind.mdb">
+    <Content Include="nwind.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

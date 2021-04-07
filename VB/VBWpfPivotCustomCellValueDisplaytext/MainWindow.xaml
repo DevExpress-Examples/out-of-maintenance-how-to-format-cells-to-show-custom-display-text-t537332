@@ -1,7 +1,8 @@
 ﻿<Window x:Class="WpfPivotCustomCellValueDisplaytext.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="400" Width="670" xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:my="clr-namespace:WpfPivotCustomCellValueDisplaytext.App_Data.nwindDataSetTableAdapters" xmlns:my1="clr-namespace:WpfPivotCustomCellValueDisplaytext.App_Data">
+        Title="MainWindow" Height="400" Width="670" xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:my="clr-namespace:WpfPivotCustomCellValueDisplaytext.nwindDataSetTableAdapters" xmlns:my1="clr-namespace:WpfPivotCustomCellValueDisplaytext">
     <Window.Resources>
         <dx:TypedSimpleSource x:Key="TypedSimpleSource" AdapterType="my:SalesPersonTableAdapter" ContextType="my1:nwindDataSet" Path="SalesPerson" />
         <dx:TypedSimpleSource x:Key="TypedSimpleSource1" AdapterType="my:SalesPersonTableAdapter" ContextType="my1:nwindDataSet" Path="SalesPerson">

@@ -4,15 +4,16 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="nwindConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="nwindConnectionString (Settings)" PropertyReference="ApplicationSettings.WpfPivotCustomCellValueDisplaytext.Properties.Settings.GlobalReference.Default.nwindConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="nwindConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="nwindConnectionString (Settings)" PropertyReference="ApplicationSettings.WpfPivotCustomCellValueDisplaytext.Settings.GlobalReference.Default.nwindConnectionString" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SalesPersonTableAdapter" GeneratorDataComponentClassName="SalesPersonTableAdapter" Name="SalesPerson" UserDataComponentName="SalesPersonTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="nwindConnectionString (Settings)" DbObjectName="SalesPerson" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="nwindConnectionString (Settings)" DbObjectName="SalesPerson" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Country, ProductName, CategoryName, OrderDate, UnitPrice, Quantity, Discount, [Extended Price], [Sales Person] FROM SalesPerson</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        ProductName, CategoryName, OrderDate, UnitPrice, Quantity, Discount, [Extended Price], [Sales Person], Country
+FROM            SalesPerson</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -39,7 +40,7 @@
   <xs:element name="nwindDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="nwindDataSet" msprop:Generator_UserDSName="nwindDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="SalesPerson" msprop:Generator_TableClassName="SalesPersonDataTable" msprop:Generator_TableVarName="tableSalesPerson" msprop:Generator_TablePropName="SalesPerson" msprop:Generator_RowDeletingName="SalesPersonRowDeleting" msprop:Generator_RowChangingName="SalesPersonRowChanging" msprop:Generator_RowEvHandlerName="SalesPersonRowChangeEventHandler" msprop:Generator_RowDeletedName="SalesPersonRowDeleted" msprop:Generator_UserTableName="SalesPerson" msprop:Generator_RowChangedName="SalesPersonRowChanged" msprop:Generator_RowEvArgName="SalesPersonRowChangeEvent" msprop:Generator_RowClassName="SalesPersonRow">
+        <xs:element name="SalesPerson" msprop:Generator_TableClassName="SalesPersonDataTable" msprop:Generator_TableVarName="tableSalesPerson" msprop:Generator_RowChangedName="SalesPersonRowChanged" msprop:Generator_TablePropName="SalesPerson" msprop:Generator_RowDeletingName="SalesPersonRowDeleting" msprop:Generator_RowChangingName="SalesPersonRowChanging" msprop:Generator_RowEvHandlerName="SalesPersonRowChangeEventHandler" msprop:Generator_RowDeletedName="SalesPersonRowDeleted" msprop:Generator_RowClassName="SalesPersonRow" msprop:Generator_UserTableName="SalesPerson" msprop:Generator_RowEvArgName="SalesPersonRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Country" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" msprop:Generator_UserColumnName="Country" minOccurs="0">
