@@ -1,12 +1,18 @@
-<Window x:Class="MainWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    Title="MainWindow" Height="400" Width="672" xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:my="clr-namespace:VBWpfPivotCustomCellValueDisplaytext" xmlns:my1="clr-namespace:VBWpfPivotCustomCellValueDisplaytext.nwindDataSetTableAdapters">
+﻿<Window x:Class="WpfPivotCustomCellValueDisplaytext.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="400" Width="670" xmlns:dxpg="http://schemas.devexpress.com/winfx/2008/xaml/pivotgrid" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:my="clr-namespace:WpfPivotCustomCellValueDisplaytext.nwindDataSetTableAdapters" xmlns:my1="clr-namespace:WpfPivotCustomCellValueDisplaytext">
     <Window.Resources>
-        <dx:TypedSimpleSource x:Key="TypedSimpleSource" AdapterType="my1:SalesPersonTableAdapter" ContextType="my:nwindDataSet" Path="SalesPerson" />        
+        <dx:TypedSimpleSource x:Key="TypedSimpleSource" AdapterType="my:SalesPersonTableAdapter" ContextType="my1:nwindDataSet" Path="SalesPerson" />
+        <dx:TypedSimpleSource x:Key="TypedSimpleSource1" AdapterType="my:SalesPersonTableAdapter" ContextType="my1:nwindDataSet" Path="SalesPerson">
+            <dx:DesignDataManager.DesignData>
+                <dx:DesignDataSettings RowCount="5" />
+            </dx:DesignDataManager.DesignData>
+        </dx:TypedSimpleSource>
     </Window.Resources>
     <Grid>
-        <dxpg:PivotGridControl DataProcessingEngine="LegacyOptimized" Name="pivotGridControl1"  CustomCellDisplayText="pivotGridControl1_CustomCellDisplayText" DataSource="{Binding Path=Data, Source={StaticResource TypedSimpleSource}}">
+        <dxpg:PivotGridControl DataProcessingEngine="LegacyOptimized" Name="pivotGridControl1" DataSource="{Binding Path=Data, Source={StaticResource TypedSimpleSource1}}" CustomCellDisplayText="pivotGridControl1_CustomCellDisplayText">
             <dxpg:PivotGridControl.Fields>
                 <dxpg:PivotGridField Area="DataArea" FieldName="Extended Price" Name="fieldExtendedPrice" AreaIndex="0" />
                 <dxpg:PivotGridField Area="RowArea" Caption="Category" FieldName="CategoryName" Name="fieldCategoryName" AreaIndex="0" />
