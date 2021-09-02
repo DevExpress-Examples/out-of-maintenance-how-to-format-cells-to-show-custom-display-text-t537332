@@ -1,5 +1,5 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPivotCustomCellValueDisplaytext", "WpfPivotCustomCellValueDisplaytext\WpfPivotCustomCellValueDisplaytext.csproj", "{D0A9B6F3-B5F0-4D7B-86B6-1A1F1E38985F}"
 EndProject
 Global
